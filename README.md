@@ -80,9 +80,11 @@ Recovered motion from projection angle 80.849°, viewed in sagittal plane – a 
 
 If you find this code useful for your research, please consider citing the following paper:
 
+```
 @article{wijesinghe2024deep,
   title={Deep-Motion-Net: GNN-based volumetric organ shape reconstruction from single-view 2D projections},
   author={Wijesinghe, Isuru and Nix, Michael and Zakeri, Arezoo and Hokmabadi, Alireza and Al-Qaisieh, Bashar and Gooya, Ali and Taylor, Zeike A},
   journal={arXiv preprint arXiv:2407.06692},
   year={2024}
 }
+```
