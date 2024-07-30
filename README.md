@@ -78,7 +78,7 @@ Recovered motion from projection angle 80.849°, viewed in sagittal plane – a 
 
 ## Citing
 
-If you find this code useful for your research, please consider citing the following paper:
+If you find this code is useful for your research, please consider citing the following paper:
 
 ```
 @article{wijesinghe2024deep,
