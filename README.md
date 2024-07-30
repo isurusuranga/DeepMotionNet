@@ -26,7 +26,7 @@ pip3 install --no-cache-dir Pillow
 
 ### Dataset Preparation
 
-Paired sets of organ motion instances (i.e. deformed volumetric meshes in.vtk unstructured grid format) and corresponding kilo-voltage (kV) X-ray images are required for model training/validation. To train and evaluate the model, we use synthetically generated data from [SuPReMo](https://github-pages.ucl.ac.uk/SuPReMo/index.html) toolkit (Surrogate Parameterized Respiratory Motion Model). Plausible patient-specific motion patterns are extracted from 4D-CT images, and new synthetic instances are produced by interpolating and, within reasonable bounds, extrapolating from these with SuPReMo. 
+Paired sets of organ motion instances (i.e. deformed volumetric meshes in.vtk unstructured grid format) and corresponding kilo-voltage (kV) X-ray images are required for model training/validation. To train and evaluate the model, we use [synthetically generated data](https://github.com/isurusuranga/SyntheticMotionDataGenerator) toolkit (Surrogate Parameterized Respiratory Motion Model). Plausible patient-specific motion patterns are extracted from 4D-CT images, and new synthetic instances are produced by interpolating and, within reasonable bounds, extrapolating from these with SuPReMo. 
 
 The process is as follows:
 
@@ -36,7 +36,7 @@ The process is as follows:
 4) Extract reference volumetric mesh configuration from the motion reconstructed 3D-CT which output when fitting the SuPReMo (use [iso2mesh](https://iso2mesh.sourceforge.net/cgi-bin/index.cgi) MATLAB package).
 5) Apply corresponding motion fields to the reference volumetric mesh to generate deformed volumetric mesh instances (use [SimpleITK](https://simpleitk.org/) python package).
 6) Generate Digitally Reconstructed Radiographs (DRRs) from deformed 3D-CTs for all required projection angles using [RTK](http://www.openrtk.org/Doxygen/DocGeo3D.html) tool-kit.
-7) Style transfer to DRRs to match the kV image intensity and noise distributions using DRR2kVTranslation.
+7) Style transfer to DRRs to match the kV image intensity and noise distributions using [DRR2kVTranslation](https://github.com/isurusuranga/DRR2kVTranslation).
 
 Once you have created relevant dataset, you can then divide the dataset into train, validation and test sets.
 
